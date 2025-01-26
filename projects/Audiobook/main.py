@@ -9,7 +9,7 @@ stop_thread = False  # Variable to signal stopping the playback
 
 def play(pdfReader):
     global pdf
-    global stop_thread
+    global stop_thread 
 
     speaker = pyttsx3.init()
 
@@ -18,6 +18,7 @@ def play(pdfReader):
             break  # Exit the loop if stop_thread is True
         text = pdfReader.pages[page_num].extract_text()
         speaker.say(text)
+        print(text)
         speaker.runAndWait()
 
     speaker.stop()
@@ -27,6 +28,7 @@ def stop_playback():
     global stop_thread
     input("Press Enter to stop playback...")
     stop_thread = True  # Set the flag to stop playback
+
 
 
 file = input("Enter your PDF file name: ")
