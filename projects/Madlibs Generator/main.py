@@ -44,11 +44,7 @@ root.title("Mad Libs Game")
 #
 choice_label = tk.Label(
     root,
-    text="""
-Choose a Mad Lib story : 
-1.In a mystical and distant land..  
-2.In the enchanting world of...  
-3.In the bustling city of...""",
+    text="Choose a Mad Lib story:\n1. In a mystical and distant land..\n2. In the enchanting world of...\n3. In the bustling city of...",
 )
 
 choice_label.pack()
